@@ -1,0 +1,22 @@
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 550px;
+  margin-top: 30px;
+}
+.icons {
+  display: flex;
+}
+.footer-text {
+  color: #3d3c3c;
+  font-family: Intel;
+  font-size: 16px;
+  font-weight: 600;
+}
+.logo {
+  height: 21px;
+  width: 18px;
+  margin-right: 5px;
+  border-width: 0px;
+  background-color: transparent;
+}

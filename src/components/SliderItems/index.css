@@ -1,0 +1,22 @@
+.slider-item-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cover-pic {
+  width: 350px;
+  height: 224px;
+}
+.book-title {
+  font-family: Intel;
+  font-weight: 600;
+  font-size: 24;
+  color: #334155;
+}
+.book-author-name {
+  font-family: Intel;
+  font-weight: 500;
+  font-size: 14;
+  color: #64748b;
+}

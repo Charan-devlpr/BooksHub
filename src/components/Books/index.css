@@ -1,0 +1,52 @@
+.book-container {
+  display: flex;
+  margin-right: 200px;
+}
+.cover-pic {
+  width: 133px;
+  height: 155px;
+  margin: 10px;
+  border-radius: 8px;
+}
+.book-heading {
+  font-weight: 600;
+  font-size: 16px;
+  color: #334155;
+  font-family: Intel;
+}
+.author-name {
+  font-weight: 500;
+  font-size: 14px;
+  color: #475569;
+  font-family: Intel;
+}
+.avg-rating {
+  font-weight: 500;
+  font-size: 12px;
+  color: #475569;
+  font-family: Intel;
+}
+.star-icon {
+  color: #fbbf24;
+  height: 15px;
+  width: 15px;
+  margin-top: 10px;
+}
+.rating {
+  font-weight: 400;
+  font-size: 14px;
+  color: #334155;
+  font-family: Intel;
+}
+.status {
+  font-weight: 500;
+  font-size: 12px;
+  color: #475569;
+  font-family: Intel;
+}
+.read-status {
+  font-weight: 500;
+  font-size: 12px;
+  color: #0284c7;
+  font-family: Intel;
+}

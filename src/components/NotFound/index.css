@@ -1,0 +1,33 @@
+.not-found-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.not-found {
+  height: 300px;
+  width: 300px;
+}
+.not-found-heading {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  color: #334155;
+}
+.not-found-content {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: #475569;
+}
+.not-found-button {
+  width: 164px;
+  height: 48px;
+  background-color: #0284c7;
+  border-radius: 12px;
+  color: #ffffff;
+  border-radius: 10px;
+  border-width: 0px;
+}

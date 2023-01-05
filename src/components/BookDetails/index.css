@@ -1,0 +1,95 @@
+.book-details-container {
+  background-color: #e5e5e5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding: 30px;
+}
+.book-details-card {
+  width: 1040px;
+  height: 626px;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+}
+.line {
+  border: 1px solid #94a3b8;
+  width: 90%;
+}
+.about-author-heading {
+  font-weight: 600;
+  font-size: 24px;
+  font-family: Intel;
+  color: #334155;
+}
+.about-author-content {
+  font-weight: 400;
+  font-size: 16px;
+  color: #475569;
+  font-family: Intel;
+}
+.about-book-heading {
+  font-weight: 600;
+  font-size: 24px;
+  font-family: Intel;
+  color: #334155;
+}
+.about-book-content {
+  font-weight: 400;
+  font-size: 16px;
+  color: #475569;
+  font-family: Intel;
+}
+.book-details-cover-pic {
+  width: 235px;
+  height: 274px;
+  border-radius: 6px;
+  margin-right: 20px;
+}
+.book-details-book-heading {
+  font-weight: 600;
+  font-size: 32px;
+  color: #334155;
+  font-family: Intel;
+}
+.book-details-author-name {
+  font-family: Intel;
+  font-weight: 500;
+  font-size: 24px;
+  color: #475569;
+}
+.book-details-avg-rating {
+  font-family: Intel;
+  font-weight: 500;
+  font-size: 24px;
+  color: #475569;
+}
+.book-details-star-icon {
+  color: #fbbf24;
+  margin-top: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.book-details-rating {
+  font-family: Intel;
+  font-weight: 400;
+  font-size: 24px;
+  color: #334155;
+}
+.book-details-status {
+  font-family: Intel;
+  font-weight: 500;
+  font-size: 24px;
+  color: #475569;
+}
+.book-details-read-status {
+  font-weight: 500;
+  font-size: 24px;
+  color: #0284c7;
+}
+.book-details-container {
+  display: flex;
+  margin-left: 50px;
+  background-color: #ffffff;
+}
