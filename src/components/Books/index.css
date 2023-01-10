@@ -50,3 +50,13 @@
   color: #0284c7;
   font-family: Intel;
 }
+
+@media screen and (max-width: 768px) {
+  .cover-pic {
+    height: 180px;
+    width: 150px;
+  }
+  .book-container {
+    margin-right: 0px;
+  }
+}
