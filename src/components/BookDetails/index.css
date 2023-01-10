@@ -93,3 +93,28 @@
   margin-left: 50px;
   background-color: #ffffff;
 }
+
+@media screen and (max-width: 768px) {
+  .book-details-container {
+    flex-direction: column;
+    margin-left: 5px;
+    padding: 5px;
+  }
+  .book-details-cover-pic {
+    margin-right: 5px;
+  }
+  .about-author-heading {
+    font-size: auto;
+    margin-left: 30px;
+  }
+  .about-author-content {
+    font-size: 15px;
+  }
+  .line {
+    width: 50%;
+  }
+  .book-details-cover-pic {
+    height: 150px;
+    width: 100px;
+  }
+}
