@@ -4,8 +4,8 @@
   height: 100vh;
 }
 .login-img {
-  width: 780px;
-  height: 1024px;
+  width: 500px;
+  height: 100vh;
 }
 .form-container {
   display: flex;
@@ -16,6 +16,7 @@
   background-color: #ffffff;
   width: 499px;
   height: 484px;
+  margin: 50px;
 }
 .input-container {
   display: flex;
@@ -40,4 +41,23 @@
 .error-msg {
   color: red;
   font-size: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+    background-color: #ffffff;
+    align-items: center;
+  }
+  .login-img {
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+    margin-top: 20px;
+  }
+  .form-container {
+    height: 300px;
+    width: 300px;
+    margin: 5px;
+  }
 }
