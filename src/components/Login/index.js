@@ -58,7 +58,7 @@ class Login extends Component {
       <div className="login-container">
         <div>
           <img
-            scr="https://res.cloudinary.com/dxqcmp4il/image/upload/v1672912250/Rectangle_1467_2x_1_kysey8.png"
+            src="https://res.cloudinary.com/dxqcmp4il/image/upload/v1672912250/Rectangle_1467_2x_1_kysey8.png"
             alt="website login"
             className="login-img"
           />
