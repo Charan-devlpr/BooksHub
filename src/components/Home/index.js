@@ -6,7 +6,6 @@ import Loader from 'react-loader-spinner'
 
 import Header from '../Header'
 import Footer from '../Footer'
-import SliderItems from '../SliderItems'
 
 import './index.css'
 
@@ -19,7 +18,7 @@ const apiStatusConstance = {
 
 class Home extends Component {
   state = {
-    booksList: [],
+    topBooks: [],
     bookApi: apiStatusConstance.initial,
   }
 
@@ -51,7 +50,7 @@ class Home extends Component {
         authorName: eachBook.author_name,
       }))
       this.setState({
-        booksList: formattedBooksList,
+        topBooks: formattedBooksList,
         bookApi: apiStatusConstance.success,
       })
     } else {
@@ -86,22 +85,58 @@ class Home extends Component {
   )
 
   renderingBooksSuccess = () => {
-    const {booksList} = this.state
-    const settings = {
-      dots: true,
+    const {topBooks} = this.state
+    const largeSettings = {
+      dots: false,
+      infinite: true,
+      speed: 500,
       slidesToShow: 4,
-      slidesToScroll: 1,
+      slidesToScroll: 3,
+    }
+    const smallSettings = {
+      dots: false,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 2,
+      slidesToScroll: 2,
     }
     return (
-      <Slider {...settings}>
-        <ul>
-          <li>
-            {booksList.map(eachBook => (
-              <SliderItems sliderItemDetails={eachBook} key={eachBook.id} />
+      <div>
+        <div className="large-carousel">
+          <Slider {...largeSettings}>
+            {topBooks.map(each => (
+              <Link to={`/books/${each.id}`} className="link-item">
+                <div className="carousel-item" key={each.id}>
+                  <img
+                    src={each.coverPic}
+                    className="cover-pic"
+                    alt="carousel"
+                  />
+                  <h1 className="book-title">{each.title}</h1>
+                  <p className="book-author-name">{each.authorName}</p>
+                </div>
+              </Link>
             ))}
-          </li>
-        </ul>
-      </Slider>
+          </Slider>
+        </div>
+        <div className="small-carousel">
+          <Slider {...smallSettings}>
+            {topBooks.map(each => (
+              <Link to={`/books/${each.id}`} className="link-item">
+                <div className="carousel-item" key={each.id}>
+                  <img
+                    src={each.coverPic}
+                    className="cover-pic"
+                    alt="carousel"
+                  />
+                  <h1 className="book-title">{each.title}</h1>
+                  <p className="book-author-name">{each.authorName}</p>
+                </div>
+              </Link>
+            ))}
+          </Slider>
+        </div>
+      </div>
     )
   }
 
@@ -134,12 +169,17 @@ class Home extends Component {
             enjoyed in the past, and we will give you surprisingly insightful
             recommendations
           </p>
+          <Link to="/bookshelves">
+            <button className="small-find-books-btn" type="button">
+              Find Books
+            </button>
+          </Link>
         </div>
         <div className="carousel-container">
           <div className="carousel-header">
             <h1 className="carousel-heading">Top Rated Books</h1>
             <Link to="/bookshelves">
-              <button className="find-books" type="button">
+              <button className="find-books-btn" type="button">
                 Find Books
               </button>
             </Link>
