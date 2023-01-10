@@ -83,7 +83,7 @@ class BookDetails extends Component {
   )
 
   renderLoading = () => (
-    <div className="loader-container">
+    <div className="loader-container" testid="loader">
       <Loader type="TailSpin" color="#0284C7" height={50} width={50} />
     </div>
   )
