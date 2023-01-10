@@ -92,10 +92,9 @@ class BookShelves extends Component {
       this.setState({
         books: formattedBooksList,
         booksApi: apiStatusConstance.success,
-        searchInput: '',
       })
     } else {
-      this.setState({booksApi: apiStatusConstance.failure, searchInput: ''})
+      this.setState({booksApi: apiStatusConstance.failure})
     }
   }
 
@@ -124,12 +123,12 @@ class BookShelves extends Component {
   )
 
   renderLoading = () => (
-    <div className="loader-container">
+    <div className="loader-container" testid="loader">
       <Loader type="TailSpin" color="#0284C7" height={50} width={50} />
     </div>
   )
 
-  renderingBooksSuccess = () => {
+  renderRequiredBooks = () => {
     const {books} = this.state
     return (
       <ul>
@@ -140,6 +139,32 @@ class BookShelves extends Component {
         </li>
       </ul>
     )
+  }
+
+  renderNoBooks = () => {
+    const {searchInput} = this.state
+    return (
+      <div className="no-books-container">
+        <img
+          src="https://res.cloudinary.com/dxqcmp4il/image/upload/v1672895458/Group_2x_1_vdgmef.png"
+          alt="not found"
+          className="no-books"
+        />
+        <p className="no-books-text">
+          Your search for {searchInput} is not found
+        </p>
+      </div>
+    )
+  }
+
+  renderingBooksSuccess = () => {
+    const {books} = this.state
+    switch (books.length) {
+      case 0:
+        return this.renderNoBooks()
+      default:
+        return this.renderRequiredBooks()
+    }
   }
 
   renderingBooks = () => {
@@ -164,7 +189,7 @@ class BookShelves extends Component {
         <div className="bookShelves-container">
           <div className="container">
             <div className="shelves-container">
-              <h1 className="bookShelves-heading">BookShelves</h1>
+              <h1 className="bookShelves-heading">Bookshelves</h1>
               <ul>
                 <li className="list-items">
                   {initialBookshelvesList.map(eachBookShelve => (
@@ -195,6 +220,21 @@ class BookShelves extends Component {
                   />
                 </div>
               </div>
+              <div className="small-shelves-container">
+                <h1 className="bookShelves-heading">Bookshelves</h1>
+                <ul>
+                  <li className="small-list-items">
+                    {initialBookshelvesList.map(eachBookShelve => (
+                      <BookShelvesList
+                        bookshelvesListDetails={eachBookShelve}
+                        key={eachBookShelve.id}
+                        updateBookshelf={this.updateBookshelf}
+                      />
+                    ))}
+                  </li>
+                </ul>
+              </div>
+
               {this.renderingBooks()}
             </div>
           </div>
