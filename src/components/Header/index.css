@@ -3,12 +3,25 @@
   justify-content: space-around;
   background-color: #ffffff;
 }
-.list-items {
+.active-nav-item {
+  color: #0284c7;
+  list-style-type: none;
+  font-family: roboto;
+  font-size: 20px;
+  margin-right: 20px;
+  display: flex;
+}
+.small-navbar-container {
+  display: none;
+}
+
+.nav-item {
   list-style-type: none;
   font-family: roboto;
   color: #64748b;
   font-size: 20px;
   margin-right: 20px;
+  display: flex;
 }
 .unOrder-items {
   display: flex;
@@ -37,4 +50,33 @@
   height: 30px;
   width: 30px;
   margin-top: 15px;
+}
+.link-item {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-container {
+    display: none;
+  }
+  .website-logo {
+    height: 25px;
+    width: 25px;
+  }
+  .small-navbar-container {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+  }
+  .hamburger {
+    height: 30px;
+    width: 30px;
+    margin-top: 20px;
+  }
+  .bookHub-text {
+    font-size: 20px;
+  }
+  .nav-link-container {
+    display: flex;
+  }
 }
