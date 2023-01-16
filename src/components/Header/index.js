@@ -45,7 +45,7 @@ class Header extends Component {
                   Home
                 </li>
               </Link>
-              <Link to="/bookshelves" className="link-item">
+              <Link to="/shelf" className="link-item">
                 <li
                   className={bookShelfColor}
                   onClick={this.onClickedBookShelfTab}
